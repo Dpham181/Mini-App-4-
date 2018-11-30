@@ -15,10 +15,7 @@ fun roundOff(final_output: kotlin.Double?): String {
     return String.format(Locale.US, "%.1f", final_output)
 
 }
-fun cal(mib: kotlin.Double?, mbp: kotlin.Double?): Double {
 
-    return mib!! * Math.pow(2.0, 20.0) * 8.0 / (mbp!! * Math.pow(10.0, 6.0))
-}
 open class DataModel : ViewModel(), Observable {
     private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
     // build in call back
