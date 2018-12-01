@@ -1,6 +1,5 @@
 package edu.fullerton.cpsc411.assignment_2
 
-import android.util.Log
 import androidx.databinding.Observable
 import androidx.databinding.ObservableDouble
 import androidx.databinding.PropertyChangeRegistry
@@ -38,8 +37,7 @@ open class DataModel : ViewModel(), Observable {
     // first text on change to get update for file size called mib
     fun mibTextChanged(s: CharSequence) {
 
-        Log.w("tag", "onTextChanged " + s);
-        // check string is empty incase blank edittext
+
 
         if(s.isNotEmpty()) {
             mib.set(java.lang.Double.parseDouble(s.toString()));
@@ -54,9 +52,6 @@ open class DataModel : ViewModel(), Observable {
     // second text on change to get update for net speed called mbps
     fun mbpsTextChanged(s: CharSequence) {
 
-        Log.w("tag", "onTextChanged " + s);
-
-        // check string is empty incase blank edittext
         if (s.isNotEmpty()) {
 
             mbps.set(java.lang.Double.parseDouble(s.toString()));
